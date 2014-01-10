@@ -1,0 +1,29 @@
+// vars
+$highlight:   #2ECC40;
+$primary:     #222e5e;
+
+$black:       #000;
+$gray:        #4a4a4a;
+$light-gray:  #50585D;
+$off-white:   #eee;
+
+$serif-stack: "freight-text-pro", Georgia, Times, "Times New Roman", serif;
+$sans-stack: "soleil", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+$space: 1.5rem;
+
+// Placeholders
+%highlight{color:$highlight;}
+%primary{color:$primary;}
+%black{color:$black;}
+%gray{color:$gray;}
+%light-gray{color:$light-gray;}
+
+%highlight-bg{background:$highlight;}
+%primary-bg{background:$primary;}
+%black-bg{background:$black;}
+%gray-bg{background:$gray;}
+%light-gray-bg{background:$light-gray;}
+
+%sans{font-family: $sans-stack;}
+%serif{font-family: $serif-stack;}

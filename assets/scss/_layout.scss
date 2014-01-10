@@ -1,0 +1,39 @@
+html,body{
+	height:100%;
+	// width:100%;
+	// max-width:100%;
+}
+body{
+	padding: $space;
+}
+p{
+	.post:first-child &:first-child{
+		margin-top: 0px;
+	}
+}
+
+%fleft{float: left;}
+%fright{float: right;}
+%nomargin{margin:0;}
+.content{
+	@extend %fleft;
+	padding: 0 $space;
+	max-width: 60%;
+	margin-left: 20%;
+}
+.right{
+	@extend %fright;
+	width: 20%;
+}
+.site-logo{
+	position: fixed;
+	top: $space;
+	left: $space;
+	width: 15%;
+}
+.site-footer{
+	clear:both;
+}
+.post-footer{
+	margin: 1.414em 0 0.5em;
+}

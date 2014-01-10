@@ -1,0 +1,11 @@
+{{!< default}}
+{{#foreach posts}}
+    <article class="post">
+        <a href="{{url}}">
+            <h2>{{title}}</h2>
+            <div class="meta">
+                <p class="text-muted">{{date published_at format="MMMM DD, YYYY"}} | {{tags}}</p>
+            </div>
+        </a>
+    </article>
+{{/foreach}}
