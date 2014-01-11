@@ -1,10 +1,10 @@
 html,body{
 	height:100%;
-	// width:100%;
-	// max-width:100%;
 }
 body{
-	padding: $space;
+	@media(min-width:600px){
+		// padding: $space;
+	}
 }
 p{
 	.post:first-child &:first-child{
@@ -16,23 +16,54 @@ p{
 %fright{float: right;}
 %nomargin{margin:0;}
 .content{
-	@extend %fleft;
-	padding: 0 $space;
-	max-width: 60%;
-	margin-left: 20%;
+	@media(max-width:599px){
+		border-top: 1px solid $off-white;
+		max-width: 100%;
+		padding:$space;
+	}
+	@media(min-width:600px){
+		@extend %fleft;
+		max-width: 80%;
+		margin-left: 20%;
+		margin-top: $space;
+		padding:0 $space;
+	}
+	@media(min-width:1000px){
+		max-width: 60%;
+	}
 }
 .right{
 	@extend %fright;
 	width: 20%;
 }
-.site-logo{
-	position: fixed;
-	top: $space;
-	left: $space;
-	width: 15%;
+.site-header{
+	@media(max-width:599px){
+		width:100%;
+		margin:$space auto;
+		text-align: center;
+		img{
+			width: 15%;
+		}
+	}
+	@media(min-width:600px){
+		width: 15%;
+		position: fixed;
+		top: $space;
+		left: $space;
+		p{
+			margin-top:0;
+		}
+	}
 }
 .site-footer{
+	border-top: 1px solid $off-white;
 	clear:both;
+	padding: 0 $space;
+	@media(min-width:600px){
+		.copyright{
+			margin-left: 21%;
+		}
+	}
 }
 .post-footer{
 	margin: 1.414em 0 0.5em;

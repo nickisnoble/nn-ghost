@@ -1,11 +1,16 @@
 {{!< default}}
 {{#foreach posts}}
     <article class="post">
-        <a href="{{url}}">
-            <h2>{{title}}</h2>
-            <div class="meta">
-                <p class="text-muted">{{date published_at format="MMMM DD, YYYY"}} | {{tags}}</p>
-            </div>
-        </a>
+            <h2><a href="{{url}}">{{title}}</a></h2>
+            <p class="meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{tags prefix="| "}}</p>
+            <hr>
     </article>
 {{/foreach}}
+	{{pagination}}<hr>
+	<section class="follow">
+        <ul class="nav">
+            <li><p>FOLLOW</p></li> |
+            <li><a class="twitter" href="http://twitter.com/nickisnoble">TWITTER</a></li> |
+            <li><a class="dribbble" href="https://www.dribbble.com/nickisnoble">DRIBBBLE</a> </li>
+        </ul>
+    </section>

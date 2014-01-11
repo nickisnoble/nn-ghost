@@ -341,26 +341,66 @@ table {
 body, h1, h2, h3, h4, h5, h6 {
   font-family: "soleil", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
+blockquote {
+  font-family: "freight-text-pro", Georgia, Times, "Times New Roman", serif; }
+
 .nav:after {
   content: "";
   display: table;
   clear: both; }
 
+.meta {
+  color: #cfcfcf; }
+
+html {
+  font-size: 80%; }
+  @media (min-width: 600px) {
+    html {
+      font-size: 100%; } }
+  @media (min-width: 1200px) {
+    html {
+      font-size: 120%; } }
+
 body {
   font-weight: 200;
   font-size: 1rem;
-  line-height: 1.45; }
+  line-height: 1.45;
+  -moz-font-feature-settings: "calt", "liga", "clig", "kern";
+  -moz-font-feature-settings: "calt=1, liga=1, clig=1, kern=1";
+  -ms-font-feature-settings: "calt", "liga", "clig", "kern";
+  -o-font-feature-settings: "calt", "liga", "clig", "kern";
+  -webkit-font-feature-settings: "calt", "liga", "clig", "kern";
+  font-feature-settings: "calt", "liga", "clig", "kern"; }
 
 p {
   margin-bottom: 1.3em; }
 
+p a {
+  border-bottom: 1px solid #cfcfcf; }
+  p a:hover, p a:focus {
+    border-color: black; }
+
+@media (max-width: 599px) {
+  p, ul, ol, code {
+    font-size: 1.3rem; } }
+
 a {
-  color: inherit;
+  color: #606060;
   text-decoration: none;
-  border-bottom: 1px solid #eeeeee; }
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -ms-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms; }
+  a:hover, a:focus {
+    color: black; }
 
 .post:first-child h1:first-child, .post:first-child h2:first-child, .post:first-child h3:first-child, .post:first-child h4:first-child, .post:first-child h5:first-child, .post:first-child h6:first-child {
   margin-top: -16px; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: black; }
+  h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, h6 a:hover, h6 a:focus {
+    color: #606060; }
 
 h1, h2, h3, h4 {
   margin: 1.414em 0 0.5em;
@@ -402,6 +442,34 @@ hr {
   margin: 1.45em 0;
   padding: 0; }
 
+code {
+  font-family: monospace;
+  color: #606060;
+  background: #eeeeee;
+  border-radius: 3px;
+  padding: 0 .5em; }
+
+pre {
+  font-family: monospace;
+  color: #606060;
+  background: #eeeeee;
+  border-radius: 3px;
+  padding: .5em; }
+  pre code {
+    border-radius: none;
+    background: inherit;
+    color: inherit;
+    padding: 0; }
+
+blockquote {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.5em;
+  line-height: 1.2; }
+
+.copyright {
+  padding-bottom: 1.3em; }
+
 img {
   max-width: 100%;
   height: auto; }
@@ -414,6 +482,8 @@ img {
     display: inline-block;
     *display: inline;
     zoom: 1; }
+  .nav p {
+    margin: 0; }
 
 .nav-fit {
   display: table;
@@ -426,34 +496,53 @@ img {
 html, body {
   height: 100%; }
 
-body {
-  padding: 1.5rem; }
-
 .post:first-child p:first-child {
   margin-top: 0px; }
-
-.content {
-  float: left; }
 
 .right {
   float: right; }
 
-.content {
-  padding: 0 1.5rem;
-  max-width: 60%;
-  margin-left: 20%; }
+@media (max-width: 599px) {
+  .content {
+    border-top: 1px solid #eeeeee;
+    max-width: 100%;
+    padding: 1.5rem; } }
+@media (min-width: 600px) {
+  .content {
+    max-width: 80%;
+    margin-left: 20%;
+    margin-top: 1.5rem;
+    padding: 0 1.5rem; } }
+@media (min-width: 1000px) {
+  .content {
+    max-width: 60%; } }
 
 .right {
   width: 20%; }
 
-.site-logo {
-  position: fixed;
-  top: 1.5rem;
-  left: 1.5rem;
-  width: 15%; }
+@media (max-width: 599px) {
+  .site-header {
+    width: 100%;
+    margin: 1.5rem auto;
+    text-align: center; }
+    .site-header img {
+      width: 15%; } }
+@media (min-width: 600px) {
+  .site-header {
+    width: 15%;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem; }
+    .site-header p {
+      margin-top: 0; } }
 
 .site-footer {
-  clear: both; }
+  border-top: 1px solid #eeeeee;
+  clear: both;
+  padding: 0 1.5rem; }
+  @media (min-width: 600px) {
+    .site-footer .copyright {
+      margin-left: 21%; } }
 
 .post-footer {
   margin: 1.414em 0 0.5em; }
